@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/rock-bingo-sensory-minds/static/css/main.05348916.chunk.css",
+    "main.js": "/rock-bingo-sensory-minds/static/js/main.c4263d13.chunk.js",
+    "main.js.map": "/rock-bingo-sensory-minds/static/js/main.c4263d13.chunk.js.map",
+    "runtime-main.js": "/rock-bingo-sensory-minds/static/js/runtime-main.22b9e2da.js",
+    "runtime-main.js.map": "/rock-bingo-sensory-minds/static/js/runtime-main.22b9e2da.js.map",
+    "static/js/2.6231dc07.chunk.js": "/rock-bingo-sensory-minds/static/js/2.6231dc07.chunk.js",
+    "static/js/2.6231dc07.chunk.js.map": "/rock-bingo-sensory-minds/static/js/2.6231dc07.chunk.js.map",
+    "static/js/3.d0a8312b.chunk.js": "/rock-bingo-sensory-minds/static/js/3.d0a8312b.chunk.js",
+    "static/js/3.d0a8312b.chunk.js.map": "/rock-bingo-sensory-minds/static/js/3.d0a8312b.chunk.js.map",
+    "index.html": "/rock-bingo-sensory-minds/index.html",
+    "static/css/main.05348916.chunk.css.map": "/rock-bingo-sensory-minds/static/css/main.05348916.chunk.css.map",
+    "static/js/2.6231dc07.chunk.js.LICENSE.txt": "/rock-bingo-sensory-minds/static/js/2.6231dc07.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22b9e2da.js",
+    "static/js/2.6231dc07.chunk.js",
+    "static/css/main.05348916.chunk.css",
+    "static/js/main.c4263d13.chunk.js"
+  ]
+}
