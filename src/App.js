@@ -33,15 +33,15 @@ function App() {
   let numbersBoardArray = [];
 
   let arrayTest = ["AC/DC", "Accept", "Adam Ant", "Alice in Chains", "Angels & Airwaves", "Angel Witch", "The Animals", "April Wine", "The Archies", "Arctic Monkeys", 
-  "Argent", "Art Garfunkel", "Audioslave", "Avenged Sevenfold", "The Avett Brothers", "Bachman Turner Overdrive", "Bad Company", "Bad Religion", "The Band", "Barns Courtney", 
-  "Bastille", "Bathory", "The Beach Boys", "Bee Gees", "Beirut", "Ben Folds", "Ben Folds 5", "Better Than Ezra", "David Bowie", "The Big Bopper", "Big & Rich", "The Beatles", 
-  "Ramones", "Nirvana", "Billy Joel", "Billy Preston", "Billy Squier", "Bjork", "The Black Crowes", "Black Flag", "The Black Keys", "Black Label Society", "Black Sabbath", "Bleachers", 
-  "Blind Guardian", "Blind Melon", "Blink-182", "Blondie", "Blood Sweat & Tears", "Bloodhound Gang", "Nick Drake", "Blues Brothers", "Blues Traveller", "Blur", "Bo Diddley", "Bob Dylan", 
-  "Bob Marley", "Bob Seger", "Bobby Darin", "Bobby Lewis", "Bobby Vee", "Booker T. and the MG's", "Bowling For Soup", "Bon Jovi", "Boston", "The Box Tops", "Boys Like Girls", "Beastie Boys", 
-  "Bread", "Breaking Benjamin", "Brenda Lee", "Brett Young", "Brian Eno", "Buddy Holly", "Buffalo Springfield", "The Buggles", "Bush", "Butthole Surfers", "Buzzcocks", "The Byrds", 
-  "Cage the Elephant", "Cake", "The Calling", "Pnatera", "Candlebox", "Candlemass", "Canned Heat", "Cannibal Corpse", "Caravan", "Carcass", "Carl Perkins", "Carly Simon", "Carole King", 
-  "The Cars", "The Cardigans", "The Carpenters", "Carrie Underwood", "Catfish and the Bottlemen", "Metallica", "Sex Pistols", "The Clash", "The Strokes", "MF Doom", "Bad Brains", "NIN", "Marilyn Manson",
-  "Chemical Brothers", "Radiohead", "Mad Season", "Tom Waits", "Rage Against The Machine", "Pennywise", "Oasis", "Melvins", "Sepultura", "NOFX" ]
+                  "Argent", "Art Garfunkel", "Audioslave", "Avenged Sevenfold", "The Avett Brothers", "Bachman Turner Overdrive", "Bad Company", "Bad Religion", "The Band", "Barns Courtney", 
+                  "Bastille", "Bathory", "The Beach Boys", "Bee Gees", "Beirut", "Ben Folds", "Ben Folds 5", "Better Than Ezra", "David Bowie", "The Big Bopper", "Big & Rich", "The Beatles", 
+                  "Ramones", "Nirvana", "Billy Joel", "Billy Preston", "Billy Squier", "Bjork", "The Black Crowes", "Black Flag", "The Black Keys", "Black Label Society", "Black Sabbath", "Bleachers", 
+                  "Blind Guardian", "Blind Melon", "Blink-182", "Blondie", "Blood Sweat & Tears", "Bloodhound Gang", "Nick Drake", "Blues Brothers", "Blues Traveller", "Blur", "Bo Diddley", "Bob Dylan", 
+                  "Bob Marley", "Bob Seger", "Bobby Darin", "Bobby Lewis", "Bobby Vee", "Booker T. and the MG's", "Bowling For Soup", "Bon Jovi", "Boston", "The Box Tops", "Boys Like Girls", "Beastie Boys", 
+                  "Bread", "Breaking Benjamin", "Brenda Lee", "Brett Young", "Brian Eno", "Buddy Holly", "Buffalo Springfield", "The Buggles", "Bush", "Butthole Surfers", "Buzzcocks", "The Byrds", 
+                  "Cage the Elephant", "Cake", "The Calling", "Pnatera", "Candlebox", "Candlemass", "Canned Heat", "Cannibal Corpse", "Caravan", "Carcass", "Carl Perkins", "Carly Simon", "Carole King", 
+                  "The Cars", "The Cardigans", "The Carpenters", "Carrie Underwood", "Catfish and the Bottlemen", "Metallica", "Sex Pistols", "The Clash", "The Strokes", "MF Doom", "Bad Brains", "NIN", "Marilyn Manson",
+                  "Chemical Brothers", "Radiohead", "Mad Season", "Tom Waits", "Rage Against The Machine", "Pennywise", "Oasis", "Melvins", "Sepultura", "NOFX" ]
 
   
 
@@ -51,15 +51,13 @@ function App() {
         let numbersBoard = Math.floor(Math.random() * 90);
         //numbersBoardArray.push(numbersBoard);
         //if (numbersBoardArray.includes(numbersBoard) === false) numbersBoardArray.push(numbersBoard);
-        console.log(arrayTest[numbersBoard]);
 
         if(numbersBoardArray.includes(arrayTest[numbersBoard]) === false){
           numbersBoardArray.push(arrayTest[numbersBoard]);
-          console.log(numbersBoardArray);
         }
         if(numbersBoardArray.length === 25){
           numbersBoardArray.map( (el, index) =>  
-          index !== 12 ? board2.push(<div key={index} className="box" id={index}>{el}</div>) : board2.push(<div key={index} className="box empty-box">ROCK BINGO</div> )
+          index !== 12 ? board2.push(<div key={index} className="box" id={el}>{el}</div>) : board2.push(<div key={index} className="box empty-box">ROCK BINGO</div> )
           );
           return board2;
         }
@@ -80,7 +78,7 @@ function App() {
 
 
     for(let i = 0; i < board2.length; i++){
-      if(board2[i].props.id === randowm){
+      if(board2[i].props.id === arrayTest[randowm]){
         document.getElementById(board2[i].props.id).className = 'complete';
         boardWin.push(i);
       }
